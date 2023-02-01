@@ -19,9 +19,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Assignment (Part 1)" << endl;
-    cout << "Let's Get Started!" << endl;
-
     srand(time(NULL));
     GameSetting setting;//for game setting
 
@@ -40,5 +37,5 @@ int main()
     zombie.land(gameboard);//zombie show in gameboard
     gameboard.displayGameBoard();
     A.display();//display Alien Attributes
-    zombie.display();//display Zombie Attributes
+    zombie.display();//display Zombie Attributes'
 }

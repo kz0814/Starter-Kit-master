@@ -2,7 +2,7 @@
 
 ## Video Demo
 
-Please provide the YouTube link to your [Video Demo](https://youtube.com).
+Please provide the YouTube link to your [Video Demo](https://youtu.be/RHFyQAKkFCE).
 
 ## Minimum Requirements
 
@@ -38,8 +38,7 @@ List all the features not yet done. Remove this section if there is no incomplet
 15. Save game & Load game
 
 ## Additional Features
-
-Describe the additional features that has been implemented.
+false
 
 ## Contributions
 
@@ -53,18 +52,21 @@ For example:
 2. Create Alien and Zombie
 
 ### Lee Jia Meng
-1. Randomly generate game board.
+1. Randomly generate game board
 2. Game Objects
 
 ## Problems Encountered & Solutions
-1.  Problem :Zombie range must not more than row and column
-    Solution:Create a vector called possiblerange which the number in the vector no more than row or column
+1.  Problem : Zombie range must not more than row and column
+    Solution: Create a vector called possiblerange which the number in the vector no more than row or column
 
-2.  Problem :Different zombie maybe stay in the same row and columns in the gameboard
-    Solution:Create a vector for each zombie position and use loop&if else statement to avoid same row and columns with the previous zombie
+2.  Problem : Different zombie maybe stay in the same row and columns in the gameboard
+    Solution: Create a vector for each zombie position and use loop&if else statement to avoid same row and columns with the previous zombie
 
-3. Problem  :Show arrow to the character turn 
-   Plan     :maybe display one more line to show which character turn
+3. Problem  : Show arrow to the current character turn 
+   Plan     : maybe display one more line to show which character turn?
+
+4. Problem : When the number entered for rows and columns exceeded 100, the screen could not show the full view of gameboard.
+   Plan    : Most probably limit the max rows and columns that the user can entered.
 
 
 

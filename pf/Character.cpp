@@ -45,7 +45,7 @@ void Alien::display()
 {
     cout << setw(8) << "Alien" << setw(5) << ":" << setw(5)
          << "Life" << setw(5) << GetAlienLife() << ", "
-         << "Attack" << setw(4) << GetAlienAttack()
+         << "Attack" << setw(5) << GetAlienAttack()
          << endl;
 }
 
