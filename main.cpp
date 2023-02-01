@@ -41,4 +41,5 @@ int main()
     gameboard.displayGameBoard();
     A.display();//display Alien Attributes
     zombie.display();//display Zombie Attributes
+    zombie.display();
 }
