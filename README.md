@@ -3,7 +3,7 @@
 Our team found out about a game called Alien Path and are intrigued by it. Hence, we decided to try and create our own little simplified version of the game. Our own version of the game would be named as Alien vs. Zombie which is exactly what the game is all about. Users need to utilise their knowledge on RPG, path-planning, and much more in order to defeat their enemies —— Zombie. There are much more details regarding it, and users can try it out to get a hint about it !
 
 You may add one signature screenshot of your program here or above the title. Check out [this tutorial](https://www.digitalocean.com/community/tutorials/markdown-markdown-images) to learn how to do it.
-[alt text](file:///C:/Users/zheng/Downloads/Screenshot+2023-02-01+210636.html)
+![Alt text](file:///C:/Users/zheng/Downloads/Screenshot+2023-02-01+210636.html)
 
 Please provide the YouTube link to your [Video Demo](https://youtube.com).
 
