@@ -65,9 +65,5 @@ For example:
 3. Problem  : Show arrow to the current character turn 
    Plan     : maybe display one more line to show which character turn?
 
-4. Problem : When the number entered for rows and columns exceeded 100, the screen could not show the full view of gameboard.
+4. Problem : When the number entered for rows and columns exceeded 100, the screen could not show the full  view of gameboard.
    Plan    : Most probably limit the max rows and columns that the user can entered.
-
-
-
-Describe the problems encountered and provide the solutions / plan for the solutions.
