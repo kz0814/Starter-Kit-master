@@ -85,4 +85,3 @@ void GameBoard::displayGameBoard() const
     cout << endl
          << endl;
 }
-
