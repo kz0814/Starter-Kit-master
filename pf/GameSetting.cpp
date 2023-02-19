@@ -5,12 +5,13 @@
 #include <iostream>
 #include "GameSetting.hpp"
 #include <string>
+#include <limits>
 using namespace std;
 
 GameSetting::GameSetting()
     
-{     dimX_=5;
-      dimY_=9;
+{     dimX_=9;
+      dimY_=5;
       ZombieNumber_=1;
 }
 
@@ -19,8 +20,8 @@ void GameSetting::displayDefault() const // display default row and columns
 {
     cout << "Default Game Settings" << endl
          << "-------------------------" << endl
-         << "Board Rows     : " << getDimX() << endl
-         << "Board Columns  : " << getDimY() << endl
+         << "Board Rows     : " << getDimY() << endl
+         << "Board Columns  : " << getDimX() << endl
          << "Zombie Count   : " << getZombieNumber() << endl
          << endl;
 }
@@ -34,35 +35,55 @@ void GameSetting::SettingChange() // change number of row,columns and nzombie
     bool run_rows=true;
     bool run_columns=true;
     bool run_nzombie=true;
-    while (run_rows)
+    while (run_columns)
     {
     cout<< "Enter rows(odd number) => ";
-    cin >> x;
-    if ( x%2 == 1)  //get only odd number
-    {
-        run_rows=false; 
-    }
-    }
-
-    while (run_columns) 
-    {
-    cout << "Enter columns(odd number) => ";
     cin >> y;
-    if (y%2 == 1) //get only odd number
+    if (y%2 == 1 && y>0) //get only odd number 
     {
         run_columns=false;
     }
+    else if(!cin)
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        continue;
     }
+    }
+    
+
+    while (run_rows) 
+    {
+    cout << "Enter columns(odd number) => ";
+    cin >> x;
+    if ( x%2 == 1 && x>0)  //get only odd number
+    {
+        run_rows=false; 
+    }
+    else if(!cin)
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        continue;
+    }
+    }
+    
     cout << endl
          << "Zombie Settings" << endl
          << "-----------------" << endl;
     while(run_nzombie)
     {
-    cout<< "Enter number of zombies(max zombie=9) => ";
+    cout<< "Enter number of zombies(min=1,max=9) => ";
     cin >> nzombie;
-    if(nzombie < 10) //get only number smaller than 10
+    if(nzombie < 10 && nzombie > 0) //get only number smaller than 10
     {
         run_nzombie=false;
+    }
+    else if(!cin)
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        continue;
     }
     }
     cout << endl
@@ -82,7 +103,7 @@ void GameSetting::Main_GameSetting()
 
     while (run)
     {
-        getline(cin,ChangeSettings);
+        cin>>ChangeSettings;
         if (ChangeSettings == "y" || ChangeSettings =="Y")
         {
             SettingChange();

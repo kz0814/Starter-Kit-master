@@ -28,7 +28,7 @@ public:
 
     //function
     void displayDefault() const; //display the default row,columns and zombie number
-    void SettingChange()  ; //change the default ro,columns and zombie number
+    void SettingChange()  ; //change the default row,columns and zombie number
     void Main_GameSetting();//combie all function
 };
 
