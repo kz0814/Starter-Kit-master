@@ -81,3 +81,24 @@ void GameBoard::displayGameBoard() const
     cout << endl
          << endl;
 }
+
+void GameBoard::reset(GameSetting &setting)
+{
+    char objects[] = {'h','r','p','^','v','<','>',' ',' ',' '};
+    int noOfObjects = 10;// number of objects in the objects array
+    char current_objects;
+    setvalue(setting);
+    for (int i = 1; i <= dimY_; ++i)
+    {
+        for (int j = 0; j <= dimX_; ++j)
+        {
+            int objNo = rand() % noOfObjects;
+            current_objects = getObject(j,i);
+            if (current_objects=='.')
+            {
+                setObject(j,i,objects[objNo]);
+            }
+            else{}
+        }
+    }
+}

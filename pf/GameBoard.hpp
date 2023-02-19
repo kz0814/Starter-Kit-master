@@ -7,9 +7,10 @@ using namespace std;
 class GameBoard
 {
 private:
-    vector<vector<char>> map_;
-    int dimX_, dimY_;
+    
 public:
+    int dimX_, dimY_;
+    vector<vector<char>> map_;
     GameBoard()
     {};
     void setvalue(GameSetting &setting)//set value depend on user input from Gamesetting 
@@ -37,6 +38,8 @@ public:
     {
         map_[dimY_-y][x-1]=object;
     };
+
+    void reset(GameSetting &setting);
 };
 
 #endif
