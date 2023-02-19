@@ -8,9 +8,6 @@
 #include <iomanip> // for setw()
 using namespace std;
 
-
-
-
 void GameBoard::init(GameSetting &setting)
 {
     setvalue(setting);
@@ -33,7 +30,6 @@ void GameBoard::init(GameSetting &setting)
         }
     }
 }
-
 
 //Display Screen
 void GameBoard::displayGameBoard() const
